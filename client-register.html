@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkEase - Client Registration</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="logo">Park<span>Ease</span></div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html" class="nav-item"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="client-register.html" class="nav-item active"><i class="fas fa-user-plus"></i> Register Client</a></li>
+                <li><a href="register.html" class="nav-item"><i class="fas fa-plus-circle"></i> Register Vehicle</a></li>
+                <li><a href="signout.html" class="nav-item"><i class="fas fa-sign-out-alt"></i> Sign-out</a></li>
+                <li><a href="reports.html" class="nav-item"><i class="fas fa-chart-bar"></i> Reports</a></li>
+            </ul>
+            <div class="user-info">
+                <p>Attendant</p>
+                <button class="logout-btn" onclick="logout()">Logout</button>
+            </div>
+        </nav>
+        
+        <main class="main-content">
+            <header class="page-header">
+                <h1>Client Registration</h1>
+            </header>
+            
+            <div class="form-panel">
+                <div class="form-title">
+                    <i class="fas fa-user"></i>
+                    Register New Client
+                </div>
+                
+                <form id="clientRegistrationForm">
+                    <div class="form-section">
+                        <h3>Client Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="clientName">Client Name</label>
+                                <input type="text" id="clientName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="clientPhone">Phone Number</label>
+                                <input type="tel" id="clientPhone" placeholder="+256" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="clientEmail">Email Address</label>
+                                <input type="email" id="clientEmail" placeholder="client@example.com" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn">Register Client</button>
+                        <button type="button" class="btn-secondary" onclick="clearForm()">Clear Form</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="quick-tips">
+                <h3>Quick Tips</h3>
+                <ul>
+                    <li>Press Ctrl+R to refresh the form</li>
+                    <li>Use Tab to navigate between fields</li>
+                    <li>Ensure email is valid for notifications</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/client-register.js"></script>
+</body>
+</html>
